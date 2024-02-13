@@ -1,0 +1,7 @@
+// fetch(`https://api.themoviedb.org/3/discover/movie?api_key=d3c7620c1fb2f037ed1627728138494b`)
+// .then(res => res.json())
+// .then(res => console.log(res))
+fetch('http://localhost:8080/moviedata')
+  .then(res => res.json())
+  .then(data => console.log(data.results.id))
+  .catch(error => console.error('Error fetching data:', error))
